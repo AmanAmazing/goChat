@@ -1,0 +1,46 @@
+package pages
+
+templ GetLogin() {
+	<!DOCTYPE html>
+	<html lang="en">
+		<head>
+			<meta charset="UTF-8"/>
+			<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+			<link rel="stylesheet" href="/assets/css/tailwind-output.css"/>
+			<script src="/assets/js/htmx.min.js"></script>
+			<title>login</title>
+		</head>
+		<body>
+			<div class="hero bg-base-200 min-h-screen">
+				<div class="hero-content flex-col lg:flex-row-reverse">
+					<div class="text-center lg:text-left">
+						<h1 class="text-5xl font-bold">Login Now!</h1>
+						<p class="py-6">
+							Enter your login credentials now to enter a world of socialising
+						</p>
+					</div>
+					// the form card
+					<div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+						<form class="card-body" hx-post="/login" hx-target="#errors" hx-swap="innerHTML">
+							<div class="form-control">
+								<label class="label" for="username"><span class="label-text">Username</span></label>
+								<input type="text" class="input input-borderd" id="username" name="username"/>
+							</div>
+							<div class="form-control">
+								<label class="label" for="password"><span class="label-text">Password</span></label>
+								<input class="input input-bordred" type="password" id="password" name="password"/>
+								<p class="label">
+									<a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+								</p>
+							</div>
+							<div id="errors"></div>
+							<div class="form-control mt-6">
+								<button class="btn btn-primary" type="submit">Login</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</body>
+	</html>
+}

@@ -1,0 +1,52 @@
+package pages
+
+import "github.com/AmanAmazing/goChat/views/components"
+
+templ GetCommunities() {
+	// TODO: Need to make users chosen commmunties appear first
+	// But for now will just list all the communities
+	<!DOCTYPE html>
+	<html lang="en">
+		@components.Head("Communities")
+		<body>
+			@components.Navbar()
+			<div class="grid grid-cols-1">
+				<div>
+					<h1 class="font-bold text-center">Communities</h1>
+				</div>
+				<div>
+					<p class="text-base/loose text-center">Discover new communities</p>
+					<div class="grid grid-cols-1 md:grid-cols-3">
+						<div>
+							@components.CommunityCard()
+						</div>
+						<div>
+							@components.CommunityCard()
+						</div>
+						<div>
+							@components.CommunityCard()
+						</div>
+						<div>
+							@components.CommunityCard()
+						</div>
+						<div>
+							@components.CommunityCard()
+						</div>
+						<div>
+							@components.CommunityCard()
+						</div>
+						<div>
+							@components.CommunityCard()
+						</div>
+						<div>
+							@components.CommunityCard()
+						</div>
+						<div>
+							@components.CommunityCard()
+						</div>
+					</div>
+				</div>
+			</div>
+		</body>
+	</html>
+}
