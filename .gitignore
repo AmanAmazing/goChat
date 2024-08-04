@@ -1,3 +1,4 @@
 node_modules
 postgres-data
 *_templ.go
+assets/css/tailwind-output.css
